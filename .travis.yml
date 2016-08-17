@@ -1,0 +1,15 @@
+sudo: required
+
+language: ruby
+
+services:
+  - docker
+
+script:
+  - docker build -t chakkritte/docker-opencv-dlib-torch .
+  - docker run -d chakkritte/docker-opencv-dlib-torch
+  
+  - docker ps -a
+  
+notifications:
+  email: false
