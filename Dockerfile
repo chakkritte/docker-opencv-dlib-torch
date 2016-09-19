@@ -1,7 +1,7 @@
 FROM ubuntu:14.04.5
 MAINTAINER Chakkrit Termritthikun <chakkritte57@nu.ac.th>
 
-RUN apt-get update && apt-get install -y \
+RUN apt-get -q -y update && apt-get install -q -y \
     build-essential \
     cmake \
     curl \
